@@ -27,6 +27,14 @@
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
+        <!-- BASE CSS -->
+	<link href="css/vendors.min.css" rel="stylesheet">
+	<link href="css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
+	<link href="css/skins/square/grey.css" rel="stylesheet">
+	
+	<script src="js/modernizr.js"></script>
+	<!-- Modernizr -->
+
 	
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -99,11 +107,213 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
+                        
                         <h1 class="h1-large">Loans Landing Page</h1>
                         <p class="p-heading p-large">Submit the form below and one of our Credit Counselors will get in touch with you for the loan quotation. Scroll down to see the complete list of loan options</p>
-                        
-                        <!-- Get Quote Form -->
-                        <form id="GetQuoteForm" data-toggle="validator" data-focus="false">
+                        <main>
+		<div class="container">
+			<div id="wizard_container">
+				<form name="example-1" id="wrapped" method="POST">
+					<input id="website" name="website" type="text" value="">
+					<!-- Leave for security protection, read docs for details -->
+					<div id="middle-wizard">
+						<div class="step" data-state="branchtype">
+						
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="item">
+										<input id="answer_1" type="radio" name="branch_group_1" value="Seo-Optimization" class="required">
+										<label for="answer_1"><span><figure><img src="img/seo-1.jpg" alt=""></figure></span><strong>Seo Optimization</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="item">
+										<input id="answer_2" name="branch_group_1" type="radio" value="Web-Development" class="required">
+										<label for="answer_2"><span><figure><img src="img/web-development-1.jpg" alt=""></figure></span><strong>Web Development</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="item">
+										<input id="answer_3" name="branch_group_1" type="radio" value="Design" class="required">
+										<label for="answer_3"><span><figure><img src="img/design-1.jpg" alt=""></figure></span><strong>Design</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+									</div>
+								</div>
+							</div>
+							<!-- /row-->
+						</div>
+						<!-- /step-->
+
+						<div class="branch" id="Seo-Optimization">
+							<div class="step" data-state="budget">
+								<div class="question_title">
+									<h3>What Type of Seo Optimization do you need?</h3>
+									<p>Multiple Selection (Checkbox based)</p>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_1" type="checkbox" name="branch_1_answers[]" value="Page SEO Checker" class="required">
+											<label for="branch_1_answer_1"><span><figure><img src="img/seo-2.jpg" alt=""></figure></span><strong>On Page SEO Checker</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_2" name="branch_1_answers[]" type="checkbox" value="Pay Per Click" class="required">
+											<label for="branch_1_answer_2"><span><figure><img src="img/seo-3.jpg" alt=""></figure></span><strong>Pay Per Click</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_1_answer_3" name="branch_1_answers[]" type="checkbox" value="Backlinks Checker" class="required">
+											<label for="branch_1_answer_3"><span><figure><img src="img/seo-4.jpg" alt=""></figure></span><strong>Backlinks Checker</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+							<!-- /step -->
+						</div>
+						<!-- /branch -->
+
+						<div class="branch" id="Web-Development">
+							<div class="step" data-state="budget">
+								<div class="question_title">
+									<h3>What Type of Web Development do you need?</h3>
+									<p>Multiple Selection (Checkbox based)</p>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_2_answer_1" type="checkbox" name="branch_2_answers[]" value="HTML Development" class="required">
+											<label for="branch_2_answer_1"><span><figure><img src="img/web-2.jpg" alt=""></figure></span><strong>HTML Development</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_2_answer_2" name="branch_2_answers[]" type="checkbox" value="CMS Development" class="required">
+											<label for="branch_2_answer_2"><span><figure><img src="img/web-3.jpg" alt=""></figure></span><strong>CMS Development</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_2_answer_3" name="branch_2_answers[]" type="checkbox" value="FrontEnd Development" class="required">
+											<label for="branch_2_answer_3"><span><figure><img src="img/web-4.jpg" alt=""></figure></span><strong>FrontEnd Development</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+						</div>
+						<!-- /branch -->
+						
+						<div class="branch" id="Design">
+							<div class="step" data-state="budget">
+								<div class="question_title">
+									<h3>What Type of Design do you need?</h3>
+									<p>Multiple Selection (Checkbox based)</p>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_3_answer_1" type="checkbox" name="branch_3_answers[]" value="Web Design">
+											<label for="branch_3_answer_1"><span><figure><img src="img/design-2.jpg" alt=""></figure></span><strong>Web Design</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_3_answer_2" name="branch_3_answers[]" type="checkbox" value="Print Design">
+											<label for="branch_3_answer_2"><span><figure><img src="img/design-3.jpg" alt=""></figure></span><strong>Print Design</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+										</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="item">
+											<input id="branch_3_answer_3" name="branch_3_answers[]" type="checkbox" value="Logo Design">
+											<label for="branch_3_answer_3"><span><figure><img src="img/design-4.jpg" alt=""></figure></span><strong>Logo Design</strong>Postea democritum mnesarchum ne nam, ad vim aperiri tractatos.</label>
+										</div>
+									</div>
+								</div>
+								<!-- /row-->
+							</div>
+							<!-- /branch -->
+							
+							<!-- Budget ============================== -->
+							<div class="step" id="budget" data-state="end">
+								<div class="question_title">
+									<h3>What is your buget?</h3>
+									<p>Touchscreen friendly Range Slider</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-5">
+										<div class="box_general">
+										<div class="rounded_slider">
+											<div id="budget_slider" style="margin: 0 auto 20px;"></div>
+											<p>Eu sed epicuri mentitum, ex mei hinc justo, no cum dictas deserunt gubergren. Ferri pericula sententiae eu pro.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /row -->
+							</div>
+							<!-- /Budget ============================== -->
+							
+							<!-- Last step ============================== -->
+							<div class="submit step" id="end">
+								<div class="question_title">
+									<h3>Plase fill with your details</h3>
+									<p>Ei duo homero postea dignissim.</p>
+								</div>
+								<div class="row justify-content-center">
+									<div class="col-lg-5">
+										<div class="box_general">
+											<div class="form-group">
+												<input type="text" name="first_last_name" class="required form-control" placeholder="First and Last name">
+											</div>
+											<div class="form-group">
+												<input type="email" name="email" class="required form-control" placeholder="Your Email">
+											</div>
+											<div class="form-group">
+												<input type="text" name="telephone" class="form-control" placeholder="Your Telephone">
+											</div>
+											<div class="form-group add_bottom_30">
+												<div class="styled-select">
+													<select class="required" name="country">
+														<option value="" selected>Select your country</option>
+														<option value="Europe">Europe</option>
+														<option value="Asia">Asia</option>
+														<option value="North America">North America</option>
+														<option value="South America">South America</option>
+													</select>
+												</div>
+											</div>
+											<div class="checkbox_questions">
+												<input name="terms" type="checkbox" class="icheck required" value="yes">
+												<label>Please accept <a href="#" data-toggle="modal" data-target="#terms-txt">terms and conditions</a>.</label>
+											</div>
+										</div>
+										<!-- /box_general -->
+									</div>
+								</div>
+								<!-- /row -->
+							</div>
+							<!-- /Last step ============================== -->
+						</div>
+					</div>
+					<!-- /middle-wizard -->
+					<div id="bottom-wizard">
+						<button type="button" name="backward" class="backward">Backward </button>
+						<button type="button" name="forward" class="forward">Forward</button>
+						<button type="submit" name="process" class="submit">Submit</button>
+					</div>
+					<!-- /bottom-wizard -->
+				</form>
+			</div>
+			<!-- /Wizard container -->
+		</div>
+		<!-- /Container -->
+	</main>
+	<!-- /main -->
+
+                         <form style="display:none" id="GetQuoteForm" data-toggle="validator" data-focus="false">
                             <div class="form-group">
                                 <input type="text" class="form-control-input" id="gname" required>
                                 <label class="label-control" for="gname">Name</label>
@@ -142,7 +352,10 @@
                             <div class="form-message">
                                 <div id="gmsgSubmit" class="h3 text-center hidden"></div>
                             </div>
-                        </form> 
+                        </form>   
+
+        
+                      
                         <!-- end of get quote form -->
                         
                     </div> <!-- end of col -->
@@ -151,7 +364,8 @@
         </div> <!-- end of header-content -->
     </header> <!-- end of header -->
     <!-- end of header -->
-
+  <!-- Get Quote Form -->
+                      
 
     <!-- Approval -->
     <div id="approval" class="accordion">
@@ -489,87 +703,7 @@
     <hr class="section-divide-hr">
 
 
-    <!-- Amount Based -->
-    <div class="cards-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">Amount Based</h2>
-                    <p class="p-heading p-large text-center">To make it easier for you to decide which is the better option, we've organized the loans offering based on maximum amount too. It's a lot easier to understand</p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-
-            <div class="row">
-                <div class="col-xs-12 col-lg-4">
-
-                    <!-- Card -->
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h3 class="card-title">Small Loan</h3>
-                            <hr class="cell-divide-hr">
-                            <p>up to</p>
-                            <p class="price"><span class="currency">$</span>5.000</p>
-                            <hr class="cell-divide-hr">
-                            <ul class="list-group v-space-lg">
-                                <li class="list-group-item"><i class="fas fa-check"></i>Repayment Schedule</li>
-                                <li class="list-group-item"><i class="fas fa-check"></i>Easy 4 Step Process</li>
-                                <li class="list-group-item"><i class="fas fa-check"></i>Credit Counselor</li>
-                                <li class="list-group-item"><i class="fas fa-check"></i>Low Interest Rate</li>
-                            </ul>
-                            <a class="btn-solid-reg page-scroll" href="#header">Quote</a>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                </div> <!-- end of col -->
-                <div class="col-xs-12 col-lg-4">
-
-                    <!-- Card -->
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h3 class="card-title">Medium Loan</h3>
-                            <hr class="cell-divide-hr">
-                            <p>up to</p>
-                            <p class="price"><span class="currency">$</span>15.000</p>
-                            <hr class="cell-divide-hr">
-                            <ul class="list-group v-space-lg">
-                                <li class="list-group-item"><i class="fas fa-check"></i>Money in the bank</li>
-                                <li class="list-group-item"><i class="fas fa-check"></i>Easy 4 Step Process</li>
-                                <li class="list-group-item"><i class="fas fa-check"></i>Credit Counselor</li>
-                                <li class="list-group-item"><i class="fas fa-check"></i>Small Commissions</li>
-                            </ul>
-                            <a class="btn-solid-reg page-scroll" href="#header">Quote</a>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                </div> <!-- end of col --> 
-                <div class="col-xs-12 col-lg-4">
-
-                    <!-- Card -->
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h3 class="card-title">Large Loan</h3>
-                            <hr class="cell-divide-hr">
-                            <p>up to</p>
-                            <p class="price"><span class="currency">$</span>25.000</p>
-                            <hr class="cell-divide-hr">
-                            <ul class="list-group v-space-lg">
-                                <li class="list-group-item"><i class="fas fa-check"></i>Easy 4 Step Process</li>
-                                <li class="list-group-item"><i class="fas fa-check"></i>Low Interest Rate</li>
-                                <li class="list-group-item"><i class="fas fa-check"></i>Credit Counselor</li>
-                                <li class="list-group-item"><i class="fas fa-check"></i>Repayment Schedule</li>
-                            </ul>
-                            <a class="btn-solid-reg page-scroll" href="#header">Quote</a>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-2 -->
-    <!-- end of amount based -->
+ 
 
 
     <!-- Description 1 -->
@@ -674,7 +808,7 @@
     <!-- end of description 2 -->
     
 
-    <!-- Questions -->
+    <!-- Questions 
     <div id="questions" class="basic-1 text-center">
         <div class="container">
             <div class="row">
@@ -682,28 +816,14 @@
                     <h3>Got Questions? Call Us</h3>
                     <p class="p-heading p-large">Need information about our loaning conditions? Or just a loan calculation? Call us! </p>
                     <a class="btn-solid-reg page-scroll" href="#yourlink"><i class="fas fa-phone"></i>+81 720 2212</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-1 -->
-    <!-- end of questions -->
+                </div> 
+            </div>
+        </div> 
+    </div> 
+     -->
     
 
-    <!-- About -->
-    <div id="about" class="basic-2 text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>About Cedo</h2>
-                    <p class="p-heading p-large text-center">We're passionate about offering the best financial services at the lowest possible cost for the customer. We've been helping people for more than 10 years.</p>
-                    <div class="embed-responsive embed-responsive-16by9 mx-auto">
-                        <iframe src="https://www.youtube.com/embed/Ey1lkwYGSC0" allowfullscreen></iframe>
-                    </div>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of about -->
+
 
 
     <!-- Testimonials -->
@@ -809,131 +929,80 @@
     <!-- end of testimonials -->
     
     
-    <!-- Contact -->
-    <div id="contact" class="form">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">Contact Info</h2>
-                    <p class="p-heading text-center">Address: 22 Innovative Area, San Francisco, Bay Area, CA 94043, USA
-                    <br>Phone: +81 720 2212, Email: <a class="underline" href="mailto:office@cedoloans.com">office@cedoloans.com</a>, Web: <a class="underline" href="#your-link">www.cedoloans.com</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
 
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.507640204439!3d37.757814996609724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sro!4v1498231462606" allowfullscreen></iframe>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    
-                    <!-- Contact Form -->
-                    <form id="ContactForm" data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Name</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Your message</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree to Ciel's <a class="underline" href="privacy-policy.html">Privacy Policy</a> and <a class="underline" href="terms-conditions.html">Terms Conditions</a> 
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">Submit</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
-                    </form>
-                    <!-- end of contact form -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form -->
-    <!-- end of contact -->
 
 
     <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="footer-col">
-                        <h4>About Cedo</h4>
-                        <p>We're passionate about offering the best financial services to our loyal customers</p>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-md-4">
-                    <div class="footer-col mx-auto">
-                        <h4>Important Links</h4>
-                        <p><a class="underline" href="terms-conditions.html">Terms & Conditions</a>, <a class="underline" href="privacy-policy.html">Privacy Policy</a>, <a class="underline" href="#your-link">Institute Of Credit & Loans Control</a>, <a class="underline" href="#your-link">National Bank</a></p>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-md-4">
-                    <div class="footer-col float-lg-right">
-                        <h4>Social Media</h4>
-                        <span class="fa-stack fa-lg">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x facebook"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack fa-lg">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x twitter"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack fa-lg">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x google-plus"></i>
-                                <i class="fab fa-google-plus-g fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack fa-lg">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x instagram"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack fa-lg">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x linkedin"></i>
-                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack fa-lg">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x dribbble"></i>
-                                <i class="fab fa-dribbble fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </div> 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-        <div class="copyright">
+    <footer>
+        <div class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-center">Copyright © Cedo - Loans Credit Landing Page Template by <a class="underline" href="http://www.inovatik.com">Inovatik</a></p>
+                    <div class="col-md-4">
+                        <div class="footer-col">
+                            <h4>About Cedo</h4>
+                            <p>We're passionate about offering the best financial services to our loyal customers</p>
+                        </div>
                     </div> <!-- end of col -->
-                </div> <!-- enf of row -->
+                    <div class="col-md-4">
+                        <div class="footer-col mx-auto">
+                            <h4>Important Links</h4>
+                            <p><a class="underline" href="terms-conditions.html">Terms & Conditions</a>, <a class="underline" href="privacy-policy.html">Privacy Policy</a>, <a class="underline" href="#your-link">Institute Of Credit & Loans Control</a>, <a class="underline" href="#your-link">National Bank</a></p>
+                        </div>
+                    </div> <!-- end of col -->
+                    <div class="col-md-4">
+                        <div class="footer-col float-lg-right">
+                            <h4>Social Media</h4>
+                            <span class="fa-stack fa-lg">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x facebook"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack fa-lg">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x twitter"></i>
+                                    <i class="fab fa-twitter fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack fa-lg">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x google-plus"></i>
+                                    <i class="fab fa-google-plus-g fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack fa-lg">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x instagram"></i>
+                                    <i class="fab fa-instagram fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack fa-lg">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x linkedin"></i>
+                                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                                </a>
+                            </span>
+                            <span class="fa-stack fa-lg">
+                                <a href="#your-link">
+                                    <i class="fas fa-circle fa-stack-2x dribbble"></i>
+                                    <i class="fab fa-dribbble fa-stack-1x"></i>
+                                </a>
+                            </span>
+                        </div> 
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
             </div> <!-- end of container -->
-        </div> <!-- end of copyright -->
-    </div> <!-- end of footer -->  
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-center">Copyright © Cedo - Loans Credit Landing Page Template by <a class="underline" href="http://www.inovatik.com">Inovatik</a></p>
+                        </div> <!-- end of col -->
+                    </div> <!-- enf of row -->
+                </div> <!-- end of container -->
+            </div> <!-- end of copyright -->
+        </div> 
+    </footer><!-- end of footer -->  
     <!-- end of footer -->
     
     	
@@ -945,7 +1014,13 @@
     <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts
+-->
+    <!-- COMMON SCRIPTS -->
+    <script src="js/common_scripts.min.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/wizard_func_single_branch.js"></script>
     
 </body>
 </html>
