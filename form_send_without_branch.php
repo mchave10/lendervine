@@ -84,7 +84,6 @@
               </svg>
 	</div>
 	<h4><span>Request successfully sent!</span>Thank you for your time</h4>
-	<small>You will be redirect back in 5 seconds.</small>
 </div>
 </body>
 </html>

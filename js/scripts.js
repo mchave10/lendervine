@@ -126,64 +126,7 @@
     });
     
 
-	/* Get Quote Form */
-    $("#GetQuoteForm").validator().on("submit", function(event) {
-    	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            gformError();
-            gsubmitMSG(false, "Please fill all fields!");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            gsubmitForm();
-        }
-    });
-
-    function gsubmitForm() {
-        // initiate variables with form content
-		var name = $("#gname").val();
-		var phone = $("#gphone").val();
-		var email = $("#gemail").val();
-        var select = $("#gselect").val();
-        var terms = $("#gterms").val();
-        
-        $.ajax({
-            type: "POST",
-            url: "php/getquoteform-process.php",
-            data: "name=" + name + "&phone=" + phone + "&email=" + email + "&select=" + select + "&terms=" + terms, 
-            success: function(text) {
-                if (text == "success") {
-                    gformSuccess();
-                } else {
-                    gformError();
-                    gsubmitMSG(false, text);
-                }
-            }
-        });
-	}
-
-    function gformSuccess() {
-        $("#GetQuoteForm")[0].reset();
-        gsubmitMSG(true, "Message Submitted!")
-    }
-
-    function gformError() {
-        $("#GetQuoteForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass();
-        });
-	}
-
-    function gsubmitMSG(valid, msg) {
-        if (valid) {
-            var msgClasses = "h3 text-center tada animated";
-        } else {
-            var msgClasses = "h3 text-center";
-        }
-        $("#gmsgSubmit").removeClass().addClass(msgClasses).text(msg);
-        $("input").removeClass('notEmpty'); // resets the field label after submission
-	}
-
-    
+	
 	/* Contact Form */
     $("#ContactForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
@@ -255,49 +198,11 @@
         }
     });
 
-    function psubmitForm() {
-        // initiate variables with form content
-		var name = $("#pname").val();
-		var email = $("#pemail").val();
-        var select = $("#pselect").val();
-        var terms = $("#pterms").val();
-        
-        $.ajax({
-            type: "POST",
-            url: "php/privacy-process.php",
-            data: "name=" + name + "&email=" + email + "&select=" + select + "&terms=" + terms, 
-            success: function(text) {
-                if (text == "success") {
-                    pformSuccess();
-                } else {
-                    pformError();
-                    psubmitMSG(false, text);
-                }
-            }
-        });
-	}
+   
 
-    function pformSuccess() {
-        $("#PrivacyForm")[0].reset();
-        psubmitMSG(true, "Request Submitted!")
-    }
 
-    function pformError() {
-        $("#PrivacyForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass();
-        });
-	}
 
-    function psubmitMSG(valid, msg) {
-        if (valid) {
-            var msgClasses = "h3 text-center tada animated";
-        } else {
-            var msgClasses = "h3 text-center";
-        }
-        $("#pmsgSubmit").removeClass().addClass(msgClasses).text(msg);
-        $("input").removeClass('notEmpty'); // resets the field label after submission
-    }
-    
+
 
     /* Back To Top Button */
     // create the back to top button
@@ -316,6 +221,79 @@
 	$(".button, a, button").mouseup(function() {
 		$(this).blur();
 	});
+    
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    $(window).on('load',function(){
+        var rangeVal = parseInt($('#loan_amount').val());
+        rangeVal = numberWithCommas(rangeVal);
+        $('#loan_amount_label').text('$' + rangeVal);    
+    });
+    $('#loan_amount').on('input change', function () {
+        var rangeVal = parseInt($('#loan_amount').val());
+        rangeVal = numberWithCommas(rangeVal);
+        $('#loan_amount_label').text('$' + rangeVal);
+    });
+     $(window).on('load',function(){
+        var rangeValrevenue = parseInt($('#monthly_revenue').val());
+        rangeValrevenue = numberWithCommas(rangeValrevenue);
+        $('#monthly_revenue_label').text('$' + rangeValrevenue + '+');    
+    });
+    $('#monthly_revenue').on('input change', function () {
+        var rangeValrevenue = parseInt($('#monthly_revenue').val());
+        rangeValrevenue  = numberWithCommas(rangeValrevenue);
+        $('#monthly_revenue_label').text('$' + rangeValrevenue + '+');
+    });
+    $(window).on('load',function(){
+        var rangeValcredit  = parseInt($('#credit_score').val());
+        rangeValcredit  = numberWithCommas(rangeValcredit );
+        $('#credit_score_label').text(rangeValcredit + '+');    
+    });
+    $('#credit_score').on('input change', function () {
+        var rangeValcredit = parseInt($('#credit_score').val());
+        rangeValcredit  = numberWithCommas(rangeValcredit );
+        $('#credit_score_label').text(rangeValcredit + '+');
+    });
+    $(window).on('load',function(){
 
+            $(".finalstep input:not(#submit)").each(function(){
+
+
+                if($(this).val() !== "") {
+
+
+                    $(this).next('label').addClass('focused');          
+                }   
+                else {
+                    $(this).next('label').removeClass('focused');  
+
+                } 
+            });     
+        });    
+        $('.finalstep input').on("change focus keydown blur", function(){
+            if($(this).val() !== "") {
+                $(this).siblings('label').addClass('focused');          
+            }   
+            else {
+                $(this).next('label').removeClass('focused');  
+
+            }    
+        }); 
+    
+        $('#bottom-wizard button').on('click',function(){
+            setTimeout(function() {
+				if($('.finalstep').hasClass('current')) {
+                    $('.header-content').addClass('finalstepheadercontent');  
+                    $('.header').addClass('finalstepheader');  
+                }
+                else {
+                    $('.header-content').removeClass('finalstepheadercontent');  
+                    $('.header').removeClass('finalstepheader');     
+                }
+			}, 500);   
+        });
+
+    
 })(jQuery);
 
